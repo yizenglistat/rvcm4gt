@@ -2,10 +2,13 @@
 
 This repository contains R codes along with simulation results for "**Bayesian varying coefficient mixed models for group testing data**". To reproduce the results in the paper, we provide implementation details as follows. 
 
-```bash
-# after downloading
-cd GVCM4GT
+<div style="background-color: rgb(0, 0, 1);">
+
+```python
+username@login001 ~$ git clone git@github.com:yizenglistat/GVCM4GT.git
+username@login001 ~$ cd GVCM4GT
 ```
+</div>
 
 ### Prerequisite
 
