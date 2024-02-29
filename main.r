@@ -2,7 +2,7 @@ rm(list=ls(all=TRUE))
 graphics.off()
 
 # running locally which might be time-consuming to run reps=500
-setwd("~/Projects/gpvcm-ssvs") 
+setwd("set-working-directory") 
 task_id <- 1
 nreps <- 500
 knowns <- c(FALSE)
