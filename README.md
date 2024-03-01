@@ -128,8 +128,9 @@ After collecting `.RData` files under `output/`, one should be able to reproduce
     <td><img src="https://latex.codecogs.com/png.latex?\dpi{110}&space;\color{blue}{0.993}\color{black}{/0.007}" alt="" /></td>
     <td><img src="https://latex.codecogs.com/png.latex?\dpi{110}&space;\color{blue}{0.993}\color{black}{/0.007}" alt="" /></td>
     <td><img src="https://latex.codecogs.com/png.latex?\dpi{110}&space;\color{blue}{0.994}\color{black}{/0.006}" alt="" /></td>
-    <td><img src="https://latex.codecogs.com/png.latex?\dpi{110}&space;\color{blue}{0.987}\color{black}{/0.013
-    }" alt="" /></td>
+    <!-- <td><img src="https://latex.codecogs.com/png.latex?\dpi{110}&space;\color{blue}{0.987}\color{black}{/0.013
+    }" alt="" /></td> -->
+    <td><img src="https://latex.codecogs.com/png.latex?\dpi{110}&space;\color{blue}{0.989}\color{black}{/0.011}" alt="" /></td>
     <td><img src="https://latex.codecogs.com/png.latex?\dpi{110}&space;\color{blue}{0.989}\color{black}{/0.011}" alt="" /></td>
   </tr>
 
@@ -151,6 +152,7 @@ After collecting `.RData` files under `output/`, one should be able to reproduce
     <td><img src="https://latex.codecogs.com/png.latex?\dpi{110}&space;\color{black}{0.000/}\color{red}{1.000}" alt="" /></td>
     <td><img src="https://latex.codecogs.com/png.latex?\dpi{110}&space;\color{black}{0.000/}\color{red}{1.000}" alt="" /></td>
     <td><img src="https://latex.codecogs.com/png.latex?\dpi{110}&space;\color{black}{0.000/}\color{red}{1.000}" alt="" /></td>
+
   </tr>
 
 </table>
