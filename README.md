@@ -63,21 +63,13 @@ After setting up the environment and arguments, one should be able to run the fo
 source('main.r')
 ```
 
-### Thanks to:
+After collecting `.RData` files under `output/`, one should be able to reproduce the results subsequently. 
 
-* Carl Boettiger and his [template package](https://github.com/cboettig/template)
-* Jeff Hollister and his [manuscriptPackage](https://github.com/jhollist/manuscriptPackage)
-* Robert Flight: http://rmflight.github.io/posts/2014/07/analyses_as_packages.html
-* Hadley Wickham: http://r-pkgs.had.co.nz/
-* Yihui Xie: http://yihui.name/knitr/
-* Rstudio
+[Some title here](output/uniform_5000_m1.pdf)
 
+### Authors
 
-### Links
-
-* https://github.com/ropensci/rrrpkg
-* https://github.com/Reproducible-Science-Curriculum/rr-init
-* http://ropensci.github.io/reproducibility-guide/
-* https://github.com/jdblischak/r-project-workflows
-* https://github.com/benmarwick/rrtools
+* [Yizeng Li](https://yizengli.com)
+* [Dewei Wang](https://sites.google.com/view/deweiwang)
+* [Joshua M. Tebbs](https://people.stat.sc.edu/tebbs/)
 
