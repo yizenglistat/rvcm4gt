@@ -1,6 +1,6 @@
 ## GVCM4GT
 
-This repository contains R codes along with simulation results for "**Regularized Bayesian varying coefficient mixed models for group testing data**". Our model is try to estimate an individual-level regression model based on
+This repository contains R codes along with simulation results for "**Generalized Bayesian varying coefficient mixed models for group testing data**". Our model is try to estimate an individual-level regression model based on
 group testing data that can capture the age-varying impact on
 the Chlamydia risk with selection. To relate available information, we consider
 
@@ -164,7 +164,5 @@ After collecting `.RData` files under `output/`, one should be able to reproduce
 ### Authors
 
 * [Yizeng Li](https://yizengli.com)
-* [Dewei Wang\*](https://sites.google.com/view/deweiwang)
+* [Dewei Wang\*](https://sites.google.com/view/deweiwang)(the corresponding author)
 * [Joshua M. Tebbs](https://people.stat.sc.edu/tebbs/)
-
-> \* the corresponding author.
