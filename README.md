@@ -1,6 +1,6 @@
-## GVCM4GT
+## RVCM4GT
 
-This repository contains R codes along with simulation results for "**Generalized Bayesian varying coefficient mixed models for group testing data**". Our model is try to estimate an individual-level regression model based on
+This repository contains R codes along with simulation results for "**Regularized Bayesian varying coefficient mixed models for group testing data**". Our model is try to estimate an individual-level regression model based on
 group testing data that can capture the age-varying impact on
 the Chlamydia risk with selection. To relate available information, we consider
 
@@ -187,7 +187,7 @@ After collecting `.RData` files under `output/`, one should be able to reproduce
     <td>0.066(0.065)</td>
   </tr>
 
-  <th rowspan="2" align="left"><img src="https://latex.codecogs.com/png.latex?\dpi{300}&space;\small\sigma=0.5" alt="" /></th>
+  <th rowspan="2" align="left"><img src="https://latex.codecogs.com/png.latex?\dpi{300}&space;\sigma=0.5" alt="" /></th>
      <td>Bias(CP95)</td>
      <td>0.047(0.950)</td>
      <td>0.044(0.952)</td>
