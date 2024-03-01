@@ -32,26 +32,41 @@ username@login001 ~$ cd GVCM4GT
 
 ### Arguments
 
->> `task_id`
+- `task_id`
+> The machine id. For example, 1,...,100 if running on the cluster. In this way, we will run 5 simulations independently on 100 nodes to have a total of 500 repetitions. 
+
+- `nreps`
+> The repetitions.
+
+- `Ns`
+> A vector of sample sizes.
+
+- `pool_sizes`
+> A vector of pool sizes.
+
+- `model_names`
+> A vector of model names. Different model names corresponds to different varying function sets.
+
+- `testings`
+> A vector of testing protocols such as AT (array testing), DT (Dorfman Testing) or IT (Individual Testing).
+
+- `N_test`
+> Number of knots values in inference for estimated varying functions. 
+
+- `sigma`
+> True random effect standard deviation
+
 
 ```r
-# task_id will be distributed as 1,...,100 for example if running on the cluster. 
-# In this way, we will run 5 simulations independently on 100 nodes to have a total of 500 repetitions. 
+# A demo example to run 500 repetitions in one machine.
 task_id 		<- 1 						
 nreps 			<- 500
-Ns 				<- c(5000)
+Ns 				<- c(3000, 5000)
 pool_sizes 		<- c(5, 10)
 model_names 	<- c("m1", "m2")
 testings 		<- c("AT", "DT", "IT")
 N_test 			<- 600
 sigma 			<- 0.5
-folder 			<- 'output'
-
-packages <- c("BayesLogit", "RcppEigen", "extraDistr", "coda", "geoR", "ltsa", "mvtnorm", "Matrix","hdf5r","Rcpp","glue", "Hmisc")
-temp <- suppressPackageStartupMessages(lapply(packages, library, character.only = TRUE))
-temp <- sapply(list.files("R", pattern="*.R$", full.names=TRUE, ignore.case=TRUE), function(x) source(x))
-temp <- sapply(list.files("src", pattern="*.cpp$", full.names=TRUE, ignore.case=TRUE), function(x) sourceCpp(x))
-rm(temp)
 ```
 
 ### Demo

@@ -1,0 +1,12 @@
+BayesLogit
+coda
+extraDistr
+geoR-v1.8-1 (https://cran.r-project.org/src/contrib/Archive/geoR/geoR_1.8-1.tar.gz)
+glue
+hdf5r
+Hmisc
+ltsa
+Matrix
+mvtnorm
+Rcpp
+RcppEigen
