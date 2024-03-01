@@ -26,14 +26,14 @@ username@login001 ~$ cd GVCM4GT
 
 ```r
 # A demo example to run 500 repetitions in one machine.
-task_id 		<- 1 						
-nreps 			<- 500
-Ns 				<- c(3000, 5000)
-pool_sizes 		<- c(5, 10)
-model_names 	<- c("m1", "m2")
-testings 		<- c("AT", "DT", "IT")
-N_test 			<- 600
-sigma 			<- 0.5
+task_id <- 1 						
+nreps <- 500
+Ns <- c(3000, 5000)
+pool_sizes <- c(5, 10)
+model_names <- c("m1", "m2")
+testings <- c("AT", "DT", "IT")
+N_test <- 600
+sigma <- 0.5
 ```
 
 - `task_id`
