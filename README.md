@@ -1,36 +1,36 @@
 ## GVCM4GT
 
-This repository contains R codes along with simulation results for "**Bayesian varying coefficient mixed models for group testing data**". To reproduce the results in the paper, we provide implementation details as follows. 
+This repository contains R codes along with simulation results for "**Bayesian varying coefficient mixed models for group testing data**". Our model is try to estimate an individual-level regression model based on
+group testing data that can capture the age-varying impact on
+the Chlamydia risk with selection. For $i=1,\ldots,N$,
+
+$$
+\text{logit}(Pr(\widetilde Y_i=1))=
+$$
+
+
+
+
+To reproduce the results in the paper, we provide implementation details as follows. 
 
 ```sh
 username@login001 ~$ git clone git@github.com:yizenglistat/GVCM4GT.git
 username@login001 ~$ cd GVCM4GT
 ```
 
-### Configuration
-
+### Arguments
 
 ```r
-# install required packagaes below in alphabetical order
-# R >= 3.6.1
-> install.packages(...)
+# A demo example to run 500 repetitions in one machine.
+task_id 		<- 1 						
+nreps 			<- 500
+Ns 				<- c(3000, 5000)
+pool_sizes 		<- c(5, 10)
+model_names 	<- c("m1", "m2")
+testings 		<- c("AT", "DT", "IT")
+N_test 			<- 600
+sigma 			<- 0.5
 ```
-
-- BayesLogit
-- coda
-- extraDistr
-- geoR, [v1.8-1](https://cran.r-project.org/src/contrib/Archive/geoR/geoR_1.8-1.tar.gz)
-- glue
-- hdf5r
-- Hmisc
-- ltsa
-- Matrix
-- mvtnorm
-- Rcpp
-- RcppEigen
-
-
-### Arguments
 
 - `task_id`
 > The machine id. For example, 1,...,100 if running on the cluster. In this way, we will run 5 simulations independently on 100 nodes to have a total of 500 repetitions. 
@@ -57,17 +57,6 @@ username@login001 ~$ cd GVCM4GT
 > True random effect standard deviation
 
 
-```r
-# A demo example to run 500 repetitions in one machine.
-task_id 		<- 1 						
-nreps 			<- 500
-Ns 				<- c(3000, 5000)
-pool_sizes 		<- c(5, 10)
-model_names 	<- c("m1", "m2")
-testings 		<- c("AT", "DT", "IT")
-N_test 			<- 600
-sigma 			<- 0.5
-```
 
 ### Demo
 
