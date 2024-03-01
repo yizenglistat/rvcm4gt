@@ -72,7 +72,94 @@ After collecting `.RData` files under `output/`, one should be able to reproduce
 
 ![figure](output/uniform_5000_m1_figure.png)
 
-![table](output/uniform_5000_m1_table.png)
+<h4></h4>
+
+<table>
+  
+  <tr>
+    <th rowspan="2">Parameter</th>
+    <th rowspan="2">Summary</th>
+    <th rowspan="2">IT</th>
+    <th colspan="2">c=5</th>
+    <th colspan="2">c=10</th>
+  </tr>
+
+  <tr>
+    <td>DT</td>
+    <td>AT</td>
+    <td>DT</td>
+    <td>AT</td>
+  </tr>
+  
+  <tr>
+    <td><img src="https://latex.codecogs.com/png.latex?\dpi{110}&space;\psi_5(u)=0" alt="\psi_5(u)=0" /></td>
+    <td>IP</td>
+    <td>0.007</td>
+    <td>0.007</td>
+    <td>0.007</td>
+    <td>0.007</td>
+    <td>0.007</td>
+  </tr>
+  
+  <tr>
+    <td><img src="https://latex.codecogs.com/png.latex?\dpi{110}&space;\psi_6(u)=0" alt="\psi_6(u)=0" /></td>
+    <td>IP</td>
+    <td>0.007</td>
+    <td>0.007</td>
+    <td>0.008</td>
+    <td>0.007</td>
+    <td>0.007</td>
+  </tr>
+
+   <tr>
+    <td><img src="https://latex.codecogs.com/png.latex?\dpi{110}&space;\color{blue}{\psi_1(u)=-1.0}" alt="\textcolor{blue}{\psi_1(u)=-1.0}" /></td>
+    <td><img src="https://latex.codecogs.com/png.latex?\dpi{110}&space;\color{blue}{\text{IPF}}\color{black}{/\text{IPV}}" alt="" /></td>
+    <td><img src="https://latex.codecogs.com/png.latex?\dpi{110}&space;\color{blue}{0.994}\color{black}{/0.005}" alt="" /></td>
+    <td><img src="https://latex.codecogs.com/png.latex?\dpi{110}&space;\color{blue}{0.993}\color{black}{/0.007}" alt="" /></td>
+    <td><img src="https://latex.codecogs.com/png.latex?\dpi{110}&space;\color{blue}{0.993}\color{black}{/0.007}" alt="" /></td>
+    <td><img src="https://latex.codecogs.com/png.latex?\dpi{110}&space;\color{blue}{0.993}\color{black}{/0.007
+    }" alt="" /></td>
+    <td><img src="https://latex.codecogs.com/png.latex?\dpi{110}&space;\color{blue}{0.993}\color{black}{/0.007}" alt="" /></td>
+  </tr>
+  
+  <tr>
+    <td><img src="https://latex.codecogs.com/png.latex?\dpi{110}&space;\color{blue}{\psi_3(u)=-0.5}" alt="\textcolor{blue}{\psi_3(u)=-0.5}" /></td>
+    <td><img src="https://latex.codecogs.com/png.latex?\dpi{110}&space;\color{blue}{\text{IPF}}\color{black}{/\text{IPV}}" alt="" /></td>
+    <td><img src="https://latex.codecogs.com/png.latex?\dpi{110}&space;\color{blue}{0.993}\color{black}{/0.007}" alt="" /></td>
+    <td><img src="https://latex.codecogs.com/png.latex?\dpi{110}&space;\color{blue}{0.993}\color{black}{/0.007}" alt="" /></td>
+    <td><img src="https://latex.codecogs.com/png.latex?\dpi{110}&space;\color{blue}{0.994}\color{black}{/0.006}" alt="" /></td>
+    <td><img src="https://latex.codecogs.com/png.latex?\dpi{110}&space;\color{blue}{0.987}\color{black}{/0.013
+    }" alt="" /></td>
+    <td><img src="https://latex.codecogs.com/png.latex?\dpi{110}&space;\color{blue}{0.989}\color{black}{/0.011}" alt="" /></td>
+  </tr>
+
+   <tr>
+    <td><img src="https://latex.codecogs.com/png.latex?\dpi{110}&space;\color{red}{\delta_{12}=\delta_{22}=1}" alt="\color{red}{\delta_{12}=\delta_{22}=1}" /></td>
+    <td><img src="https://latex.codecogs.com/png.latex?\dpi{110}&space;\color{black}{\text{IPF/}}\color{red}{\text{IPV}}" alt="" /></td>
+    <td><img src="https://latex.codecogs.com/png.latex?\dpi{110}&space;\color{black}{0.000/}\color{red}{1.000}" alt="" /></td>
+    <td><img src="https://latex.codecogs.com/png.latex?\dpi{110}&space;\color{black}{0.000/}\color{red}{1.000}" alt="" /></td>
+    <td><img src="https://latex.codecogs.com/png.latex?\dpi{110}&space;\color{black}{0.000/}\color{red}{1.000}" alt="" /></td>
+    <td><img src="https://latex.codecogs.com/png.latex?\dpi{110}&space;\color{black}{0.000/}\color{red}{1.000}" alt="" /></td>
+    <td><img src="https://latex.codecogs.com/png.latex?\dpi{110}&space;\color{black}{0.000/}\color{red}{1.000}" alt="" /></td>
+  </tr>
+  
+  <tr>
+    <td><img src="https://latex.codecogs.com/png.latex?\dpi{110}&space;\color{red}{\delta_{14}=\delta_{24}=1}" alt="\color{red}{\delta_{14}=\delta_{24}=1}" /></td>
+   <td><img src="https://latex.codecogs.com/png.latex?\dpi{110}&space;\color{black}{\text{IPF/}}\color{red}{\text{IPV}}" alt="" /></td>
+    <td><img src="https://latex.codecogs.com/png.latex?\dpi{110}&space;\color{black}{0.000/}\color{red}{1.000}" alt="" /></td>
+    <td><img src="https://latex.codecogs.com/png.latex?\dpi{110}&space;\color{black}{0.000/}\color{red}{1.000}" alt="" /></td>
+    <td><img src="https://latex.codecogs.com/png.latex?\dpi{110}&space;\color{black}{0.000/}\color{red}{1.000}" alt="" /></td>
+    <td><img src="https://latex.codecogs.com/png.latex?\dpi{110}&space;\color{black}{0.000/}\color{red}{1.000}" alt="" /></td>
+    <td><img src="https://latex.codecogs.com/png.latex?\dpi{110}&space;\color{black}{0.000/}\color{red}{1.000}" alt="" /></td>
+  </tr>
+
+</table>
+
+> IP: the inclusion probability of the any significant effect, i.e., $\alpha_d$ or $\beta_d(u)$. 
+
+> IPF: the inclusion probability of the age-independent effect, i.e., $\alpha_d$ only.
+
+> IPV: the inclusion probability of the age-varying effect, i.e., $\beta_d(u)$ only.
 
 ### Authors
 
@@ -80,4 +167,4 @@ After collecting `.RData` files under `output/`, one should be able to reproduce
 * [Dewei Wang\*](https://sites.google.com/view/deweiwang)
 * [Joshua M. Tebbs](https://people.stat.sc.edu/tebbs/)
 
-> \*: the corresponding author.
+> \* the corresponding author.
