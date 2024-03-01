@@ -18,8 +18,8 @@ where $\widetilde Y_i$ is the hidden Chlamydia status for $i^{th}$ patient, age 
 To reproduce the results in the paper, we provide implementation details as follows. 
 
 ```sh
-username@login001 ~$ git clone git@github.com:yizenglistat/GVCM4GT.git
-username@login001 ~$ cd GVCM4GT
+username@login001 ~$ git clone git@github.com:yizenglistat/rvcm4gt.git
+username@login001 ~$ cd rvcm4gt
 ```
 
 ### Arguments
