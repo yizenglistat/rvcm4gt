@@ -65,7 +65,7 @@ source('main.r')
 
 After collecting `.RData` files under `output/`, one should be able to reproduce the results subsequently. 
 
-![demo](output/uniform_5000_m1.pdf)
+![demo](output/uniform_5000_m1.png)
 
 ### Authors
 
