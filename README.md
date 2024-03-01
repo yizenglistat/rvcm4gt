@@ -5,9 +5,10 @@ group testing data that can capture the age-varying impact on
 the Chlamydia risk with selection. To relate available information, we consider
 
 $$
-\text{logit}(\text{Pr}(\widetilde Y_i=1\mid \boldsymbol x_i, u_i))=\underbrace{\sum_{d=0}^p x_{id}\psi_d(u_i)}\_{\text{Age-varying Effects}} + \underbrace{\sum_{\ell=1}^L r_\ell(i)\gamma_\ell}\_{\text{Random effect}} \quad\text{for }i=1,\ldots,N.
+\text{logit}(\text{Pr}(\widetilde Y_i=1\mid \boldsymbol x_i, u_i))=\underbrace{\sum_{d=0}^p x_{id}\psi_d(u_i)}\_{\text{Age-varying Effects}} + \underbrace{\sum_{\ell=1}^L r_\ell(i)\gamma_\ell}\_{\text{Random Effect}} \quad\text{for }i=1,\ldots,N,
 $$
 
+where $\boldsymbol x_i=(x_{i0},x_{i1},\ldots,x_{ip})^\top$. 
 
 To reproduce the results in the paper, we provide implementation details as follows. 
 
@@ -54,9 +55,13 @@ sigma 			<- 0.5
 - `sigma`
 > True random effect standard deviation
 
+### Reproduce
 
+After setting up the environment and arguments, one should be able to run the following code in `R` to reproduce simulation results in the paper.
 
-### Demo
+```r
+source('main.r')
+```
 
 ### Thanks to:
 
