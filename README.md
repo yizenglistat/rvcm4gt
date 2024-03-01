@@ -5,7 +5,7 @@ group testing data that can capture the age-varying impact on
 the Chlamydia risk with selection. For $i=1,\ldots,N$,
 
 $$
-\text{logit}(Pr(\widetilde Y_i=1))=
+\text{logit}(\text{Pr}(\widetilde Y_i=1\mid \boldsymbol x_i, u_i))=
 $$
 
 
