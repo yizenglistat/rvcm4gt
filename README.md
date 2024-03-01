@@ -5,7 +5,7 @@ group testing data that can capture the age-varying impact on
 the Chlamydia risk with selection. To relate available information, we consider
 
 $$
-\text{logit}(\text{Pr}(\widetilde Y_i=1\mid \boldsymbol x_i, u_i))=\underbrace{\sum_{d=0}^p x_{id}\psi_d(u_i)}_{\text{Age-varying Effects}} + \underbrace{\sum_{\ell=1}^L r_\ell(i)\gamma_\ell}_{\text{Random effect}} \quad\text{for }i=1,\ldots,N.
+\text{logit}(\text{Pr}(\widetilde Y_i=1\mid \boldsymbol x_i, u_i))=\underbrace{\sum_{d=0}^p x_{id}\psi_d(u_i)}\_{\text{Age-varying Effects}} + \underbrace{\sum_{\ell=1}^L r_\ell(i)\gamma_\ell}\_{\text{Random effect}} \quad\text{for }i=1,\ldots,N.
 $$
 
 
