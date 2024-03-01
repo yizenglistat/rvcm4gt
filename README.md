@@ -57,7 +57,7 @@ sigma 			<- 0.5
 
 ### Reproduce
 
-After setting up the environment and arguments, one should be able to run the following code in `R` to reproduce simulation results in the paper.
+After setting up the environment (`requirement.txt`) and arguments, one should be able to run the following code in `R` to reproduce simulation results in the paper.
 
 ```r
 source('main.r')
@@ -70,6 +70,7 @@ After collecting `.RData` files under `output/`, one should be able to reproduce
 ### Authors
 
 * [Yizeng Li](https://yizengli.com)
-* [Dewei Wang](https://sites.google.com/view/deweiwang)
+* [Dewei Wang\*](https://sites.google.com/view/deweiwang)
 * [Joshua M. Tebbs](https://people.stat.sc.edu/tebbs/)
 
+> \*: the corresponding author.
