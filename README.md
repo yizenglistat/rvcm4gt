@@ -316,14 +316,7 @@ After collecting `.RData` files under `output/`, one should be able to reproduce
 ### Authors
 
 <a href="https://github.com/yizenglistat">
-  <svg width="50" height="50" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-    <defs>
-      <clipPath id="clip-circle">
-        <circle cx="25" cy="25" r="25"/>
-      </clipPath>
-    </defs>
-    <image href="https://github.com/yizenglistat.png?size=100" width="50" height="50" clip-path="url(#clip-circle)"/>
-  </svg>
+![SVG Image](data:image/svg+xml;base64,Cjxzdmcgd2lkdGg9IjUwIiBoZWlnaHQ9IjUwIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIj4KICA8ZGVmcz4KICAgIDxjbGlwUGF0aCBpZD0iY2xpcC1jaXJjbGUiPgogICAgICA8Y2lyY2xlIGN4PSIyNSIgY3k9IjI1IiByPSIyNSIvPgogICAgPC9jbGlwUGF0aD4KICA8L2RlZnM+CiAgPGltYWdlIGhyZWY9Imh0dHBzOi8vZ2l0aHViLmNvbS95aXplbmdsaXN0YXQucG5nP3NpemU9MTAwIiB3aWR0aD0iNTAiIGhlaWdodD0iNTAiIGNsaXAtcGF0aD0idXJsKCNjbGlwLWNpcmNsZSkiLz4KPC9zdmc+Cg==)
 </a>
 <a href="https://github.com/Harrindy">
   <svg width="50" height="50" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
@@ -351,6 +344,31 @@ After collecting `.RData` files under `output/`, one should be able to reproduce
 ### License
 This project is licensed under the MIT License - see the [License](LICENSE.txt) file for details.
 
+
+
+
+
+
+
+import base64
+
+# SVG code with the image and modifications as requested
+svg_code = '''
+<svg width="50" height="50" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+  <defs>
+    <clipPath id="clip-circle">
+      <circle cx="25" cy="25" r="25"/>
+    </clipPath>
+  </defs>
+  <image href="https://github.com/yizenglistat.png?size=100" width="50" height="50" clip-path="url(#clip-circle)"/>
+</svg>
+'''
+
+# Encoding the SVG code
+encoded_svg = base64.b64encode(svg_code.encode('utf-8')).decode('utf-8')
+data_uri = f"data:image/svg+xml;base64,{encoded_svg}"
+
+data_uri
 
 
 
