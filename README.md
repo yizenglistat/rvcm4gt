@@ -159,7 +159,7 @@ After collecting `.RData` files under `output/`, one should be able to reproduce
   </tr>
 
   <tr>
-    <th rowspan="2" align="left"><img src="https://latex.codecogs.com/png.latex?\dpi{300}\large\psi_1(u)=\alpha_1=-1.0" alt=""/></th>
+    <th rowspan="2" align="left"><img src="https://latex.codecogs.com/png.latex?\dpi{300}\Large{\psi_1(u)=\alpha_1=-1.0}" alt=""/></th>
      <td>Bias(CP95)</td>
      <td>-0.008(0.962)</td>
      <td>-0.015(0.940)</td>
