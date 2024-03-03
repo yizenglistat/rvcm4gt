@@ -319,13 +319,13 @@ After collecting `.RData` files under `output/`, one should be able to reproduce
 ### Authors
 
 <a href="https://github.com/yizenglistat">
-  <img src="https://github.com/yizenglistat.png?size=100" title="yizenglistat" alt="yizenglistat" width="50" height="50" style="border-radius: 50%;">
+  <img src="https://github.com/yizenglistat.png?size=100" title="yizenglistat" alt="yizenglistat" width="50" height="50" style="border-radius: 100%;">
 </a>
 <a href="https://github.com/Harrindy">
-  <img src="https://github.com/Harrindy.png?size=100" title="Harrindy" alt="Harrindy" width="50" height="50" style="border-radius: 50%;">
+  <img src="https://github.com/Harrindy.png?size=100" title="Harrindy" alt="Harrindy" width="50" height="50" style="border-radius: 100%;">
 </a>
 <a href="https://scholar.google.com/citations?user=vSy9J1HEZlYC&hl=en">
-  <img src="https://scholar.googleusercontent.com/citations?view_op=medium_photo&user=vSy9J1HEZlYC&citpid=1" width="50" height="50" alt="Joshua M. Tebbs" style="border-radius: 50%;">
+  <img src="https://scholar.googleusercontent.com/citations?view_op=medium_photo&user=vSy9J1HEZlYC&citpid=1" width="50" height="50" alt="Joshua M. Tebbs" style="border-radius: 100%;">
 </a>
 
 - [Dewei Wang](https://github.com/Harrindy) - *the corresponding author*
