@@ -1,4 +1,5 @@
 ## RVCM4GT 
+[![package](https://img.shields.io/github/r-package/v/yizenglistat/rvcm4gt)]()
 [![Releases](https://img.shields.io/github/v/release/yizenglistat/rvcm4gt)]()
 [![Downloads](https://img.shields.io/github/downloads/yizenglistat/rvcm4gt/total)]()
 
