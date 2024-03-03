@@ -315,29 +315,14 @@ After collecting `.RData` files under `output/`, one should be able to reproduce
 
 ### Authors
 
-<!-- <a href="https://github.com/yizenglistat">
-![SVG Image](data:image/svg+xml;base64,Cjxzdmcgd2lkdGg9IjUwIiBoZWlnaHQ9IjUwIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIj4KICA8ZGVmcz4KICAgIDxjbGlwUGF0aCBpZD0iY2xpcC1jaXJjbGUiPgogICAgICA8Y2lyY2xlIGN4PSIyNSIgY3k9IjI1IiByPSIyNSIvPgogICAgPC9jbGlwUGF0aD4KICA8L2RlZnM+CiAgPGltYWdlIGhyZWY9Imh0dHBzOi8vZ2l0aHViLmNvbS95aXplbmdsaXN0YXQucG5nP3NpemU9MTAwIiB3aWR0aD0iNTAiIGhlaWdodD0iNTAiIGNsaXAtcGF0aD0idXJsKCNjbGlwLWNpcmNsZSkiLz4KPC9zdmc+Cg==)
-</a> -->
-![SVG Image](data:image/svg+xml;base64,Cjxzdmcgd2lkdGg9IjUwIiBoZWlnaHQ9IjUwIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIj4KICA8ZGVmcz4KICAgIDxjbGlwUGF0aCBpZD0iY2xpcC1jaXJjbGUiPgogICAgICA8Y2lyY2xlIGN4PSIyNSIgY3k9IjI1IiByPSIyNSIvPgogICAgPC9jbGlwUGF0aD4KICA8L2RlZnM+CiAgPGltYWdlIGhyZWY9Imh0dHBzOi8vZ2l0aHViLmNvbS95aXplbmdsaXN0YXQucG5nP3NpemU9MTAwIiB3aWR0aD0iNTAiIGhlaWdodD0iNTAiIGNsaXAtcGF0aD0idXJsKCNjbGlwLWNpcmNsZSkiLz4KPC9zdmc+Cg==)
+<a href="https://github.com/yizenglistat">
+  <img src="https://github.com/yizenglistat.png?size=100" title="yizenglistat" alt="yizenglistat" width="50" height="50" style="border-radius: 50%;">
+</a>
 <a href="https://github.com/Harrindy">
-  <svg width="50" height="50" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-  <defs>
-    <clipPath id="clip-circle">
-      <circle cx="25" cy="25" r="25"/>
-    </clipPath>
-  </defs>
-  <image href="https://github.com/Harrindy.png?size=100" width="50" height="50" clip-path="url(#clip-circle)"/>
-</svg>
+  <img src="https://github.com/Harrindy.png?size=100" title="Harrindy" alt="Harrindy" width="50" height="50" style="border-radius: 50%;">
 </a>
 <a href="https://scholar.google.com/citations?user=vSy9J1HEZlYC&hl=en">
-    <svg width="50" height="50" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-  <defs>
-    <clipPath id="clip-circle">
-      <circle cx="25" cy="25" r="25"/>
-    </clipPath>
-  </defs>
-  <image href="https://scholar.googleusercontent.com/citations?view_op=medium_photo&user=vSy9J1HEZlYC&citpid=1?size=100" x="-9" y="-5" width="70" height="70" clip-path="url(#clip-circle)"/>
-</svg>
+  <img src="https://scholar.googleusercontent.com/citations?view_op=medium_photo&user=vSy9J1HEZlYC&citpid=1" width="50" height="50" alt="Joshua M. Tebbs" style="border-radius: 50%;">
 </a>
 
 - [Dewei Wang](https://github.com/Harrindy) - *the corresponding author*
