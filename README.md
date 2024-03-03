@@ -177,7 +177,7 @@ After collecting `.RData` files under `output/`, one should be able to reproduce
     <td>0.077(0.074)</td>
   </tr>
 
-  <th rowspan="2" align="left"><img src="https://latex.codecogs.com/png.latex?\dpi{300}&space;\psi_3(u)=\alpha_3=-0.5" width="800" height="18" /></th>
+  <th rowspan="2" align="left"><img src="https://latex.codecogs.com/png.latex?\dpi{300}&space;\psi_3(u)=\alpha_3=-0.5" width="450" height="15" /></th>
      <td>Bias(CP95)</td>
      <td>-0.007(0.942)</td>
      <td>-0.008(0.936)</td>
