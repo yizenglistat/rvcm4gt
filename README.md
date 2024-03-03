@@ -119,7 +119,7 @@ After collecting `.RData` files under `output/`, one should be able to reproduce
   </tr>
 
    <tr>
-    <td align="left"><img src="https://latex.codecogs.com/png.latex?\dpi{300}&space;\color{blue}{\psi_1(u)=-1.0}" alt="" /></td>
+    <td align="left"><img src="https://latex.codecogs.com/png.latex?\dpi{300}&space;\color{blue}{\psi_1(u)=-1.0}" alt="\textcolor{blue}{\psi_1(u)=-1.0}" /></td>
     <td><img src="https://latex.codecogs.com/png.latex?\dpi{300}&space;\color{blue}{\text{IPF}}\color{black}{/\text{IPV}}" alt="" /></td>
     <td><img src="https://latex.codecogs.com/png.latex?\dpi{300}&space;\color{blue}{0.994}\color{black}{/0.005}" alt="" /></td>
     <td><img src="https://latex.codecogs.com/png.latex?\dpi{300}&space;\color{blue}{0.993}\color{black}{/0.007}" alt="" /></td>
@@ -129,7 +129,7 @@ After collecting `.RData` files under `output/`, one should be able to reproduce
   </tr>
   
   <tr>
-    <td align="left"><img src="https://latex.codecogs.com/png.latex?\dpi{300}&space;\color{blue}{\psi_3(u)=-0.5}" alt="" /></td>
+    <td align="left"><img src="https://latex.codecogs.com/png.latex?\dpi{300}&space;\color{blue}{\psi_3(u)=-0.5}" alt="\textcolor{blue}{\psi_3(u)=-0.5}" /></td>
     <td style="border-bottom: 1.5px solid black;"><img src="https://latex.codecogs.com/png.latex?\dpi{300}&space;\color{blue}{\text{IPF}}\color{black}{/\text{IPV}}" alt="" /></td>
     <td style="border-bottom: 1.5px solid black;"><img src="https://latex.codecogs.com/png.latex?\dpi{300}&space;\color{blue}{0.993}\color{black}{/0.007}" alt="" /></td>
     <td style="border-bottom: 1.5px solid black;"><img src="https://latex.codecogs.com/png.latex?\dpi{300}&space;\color{blue}{0.993}\color{black}{/0.007}" alt="" /></td>
@@ -139,7 +139,7 @@ After collecting `.RData` files under `output/`, one should be able to reproduce
   </tr>
 
    <tr>
-    <td align="left"><img src="https://latex.codecogs.com/png.latex?\dpi{300}&space;\color{red}{\delta_{12}=\delta_{22}=1}" alt="" /></td>
+    <td align="left"><img src="https://latex.codecogs.com/png.latex?\dpi{300}&space;\color{red}{\delta_{12}=\delta_{22}=1}" alt="\color{red}{\delta_{12}=\delta_{22}=1}" /></td>
     <td><img src="https://latex.codecogs.com/png.latex?\dpi{300}&space;\color{black}{\text{IPF/}}\color{red}{\text{IPV}}" alt="" /></td>
     <td><img src="https://latex.codecogs.com/png.latex?\dpi{300}&space;\color{black}{0.000/}\color{red}{1.000}" alt="" /></td>
     <td><img src="https://latex.codecogs.com/png.latex?\dpi{300}&space;\color{black}{0.000/}\color{red}{1.000}" alt="" /></td>
@@ -149,7 +149,7 @@ After collecting `.RData` files under `output/`, one should be able to reproduce
   </tr>
   
   <tr style="border-bottom: 1.5px solid black;">
-    <td align="left"><img src="https://latex.codecogs.com/png.latex?\dpi{300}&space;\color{red}{\delta_{14}=\delta_{24}=1}" alt="" /></td>
+    <td align="left"><img src="https://latex.codecogs.com/png.latex?\dpi{300}&space;\color{red}{\delta_{14}=\delta_{24}=1}" alt="\color{red}{\delta_{14}=\delta_{24}=1}" /></td>
    <td><img src="https://latex.codecogs.com/png.latex?\dpi{300}&space;\color{black}{\text{IPF/}}\color{red}{\text{IPV}}" alt="" /></td>
     <td><img src="https://latex.codecogs.com/png.latex?\dpi{300}&space;\color{black}{0.000/}\color{red}{1.000}" alt="" /></td>
     <td><img src="https://latex.codecogs.com/png.latex?\dpi{300}&space;\color{black}{0.000/}\color{red}{1.000}" alt="" /></td>
@@ -159,7 +159,7 @@ After collecting `.RData` files under `output/`, one should be able to reproduce
   </tr>
 
   <tr>
-    <th rowspan="2" align="left"><img src="https://latex.codecogs.com/png.latex?\dpi{300}\Large{\psi_1(u)=\alpha_1=-1.0}" alt=""/></th>
+    <th rowspan="2" align="left"><img src="https://latex.codecogs.com/png.latex?\dpi{300}&space;\psi_1(u)=\alpha_1=-1.0" alt="" /></th>
      <td>Bias(CP95)</td>
      <td>-0.008(0.962)</td>
      <td>-0.015(0.940)</td>
