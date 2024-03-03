@@ -315,9 +315,10 @@ After collecting `.RData` files under `output/`, one should be able to reproduce
 
 ### Authors
 
-<a href="https://github.com/yizenglistat">
+<!-- <a href="https://github.com/yizenglistat">
 ![SVG Image](data:image/svg+xml;base64,Cjxzdmcgd2lkdGg9IjUwIiBoZWlnaHQ9IjUwIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIj4KICA8ZGVmcz4KICAgIDxjbGlwUGF0aCBpZD0iY2xpcC1jaXJjbGUiPgogICAgICA8Y2lyY2xlIGN4PSIyNSIgY3k9IjI1IiByPSIyNSIvPgogICAgPC9jbGlwUGF0aD4KICA8L2RlZnM+CiAgPGltYWdlIGhyZWY9Imh0dHBzOi8vZ2l0aHViLmNvbS95aXplbmdsaXN0YXQucG5nP3NpemU9MTAwIiB3aWR0aD0iNTAiIGhlaWdodD0iNTAiIGNsaXAtcGF0aD0idXJsKCNjbGlwLWNpcmNsZSkiLz4KPC9zdmc+Cg==)
-</a>
+</a> -->
+![SVG Image](data:image/svg+xml;base64,Cjxzdmcgd2lkdGg9IjUwIiBoZWlnaHQ9IjUwIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIj4KICA8ZGVmcz4KICAgIDxjbGlwUGF0aCBpZD0iY2xpcC1jaXJjbGUiPgogICAgICA8Y2lyY2xlIGN4PSIyNSIgY3k9IjI1IiByPSIyNSIvPgogICAgPC9jbGlwUGF0aD4KICA8L2RlZnM+CiAgPGltYWdlIGhyZWY9Imh0dHBzOi8vZ2l0aHViLmNvbS95aXplbmdsaXN0YXQucG5nP3NpemU9MTAwIiB3aWR0aD0iNTAiIGhlaWdodD0iNTAiIGNsaXAtcGF0aD0idXJsKCNjbGlwLWNpcmNsZSkiLz4KPC9zdmc+Cg==)
 <a href="https://github.com/Harrindy">
   <svg width="50" height="50" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
   <defs>
