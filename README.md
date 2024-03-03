@@ -70,6 +70,7 @@ sigma <- 0.5
 After setting up the environment (`requirement.txt`) and arguments, one should be able to run the following code in `R` to reproduce simulation results in the paper.
 
 ```r
+# R version 3.6.0+
 > source('main.r')
 ```
 
