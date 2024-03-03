@@ -99,7 +99,7 @@ After collecting `.RData` files under `output/`, one should be able to reproduce
   </tr>
   
   <tr>
-    <td align="left"><img src="https://latex.codecogs.com/png.latex?\dpi{300}&space;\psi_5(u)=0" alt="\psi_5(u)=0" /></td>
+    <td align="left"><img src="https://latex.codecogs.com/png.latex?\dpi{300}&space;\psi_5(u)=0" alt="\psi_5(u)=0\color{white}{aa}" /></td>
     <td>IP</td>
     <td>0.007</td>
     <td>0.007</td>
@@ -109,7 +109,7 @@ After collecting `.RData` files under `output/`, one should be able to reproduce
   </tr>
   
   <tr>
-    <td align="left"><img src="https://latex.codecogs.com/png.latex?\dpi{300}&space;\psi_6(u)=0" alt="\psi_6(u)=0" /></td>
+    <td align="left"><img src="https://latex.codecogs.com/png.latex?\dpi{300}&space;\psi_6(u)=0" alt="\psi_6(u)=0\color{white}{aa}" /></td>
     <td style="border-bottom: 1.5px solid black;">IP</td>
     <td style="border-bottom: 1.5px solid black;">0.007</td>
     <td style="border-bottom: 1.5px solid black;">0.007</td>
@@ -139,7 +139,7 @@ After collecting `.RData` files under `output/`, one should be able to reproduce
   </tr>
 
    <tr>
-    <td align="left"><img src="https://latex.codecogs.com/png.latex?\dpi{300}&space;\color{red}{\delta_{12}=\delta_{22}=1}" alt="\color{red}{\delta_{12}=\delta_{22}=1}" /></td>
+    <td align="left"><img src="https://latex.codecogs.com/png.latex?\dpi{300}&space;\color{red}{\delta_{12}=\delta_{22}=1}" width="450" height="25" /></td>
     <td><img src="https://latex.codecogs.com/png.latex?\dpi{300}&space;\color{black}{\text{IPF/}}\color{red}{\text{IPV}}" alt="" /></td>
     <td><img src="https://latex.codecogs.com/png.latex?\dpi{300}&space;\color{black}{0.000/}\color{red}{1.000}" alt="" /></td>
     <td><img src="https://latex.codecogs.com/png.latex?\dpi{300}&space;\color{black}{0.000/}\color{red}{1.000}" alt="" /></td>
@@ -149,7 +149,7 @@ After collecting `.RData` files under `output/`, one should be able to reproduce
   </tr>
   
   <tr style="border-bottom: 1.5px solid black;">
-    <td align="left"><img src="https://latex.codecogs.com/png.latex?\dpi{300}&space;\color{red}{\delta_{14}=\delta_{24}=1}" width="50" height="50"/></td>
+    <td align="left"><img src="https://latex.codecogs.com/png.latex?\dpi{300}&space;\color{red}{\delta_{14}=\delta_{24}=1}" width="450" height="25"/></td>
    <td><img src="https://latex.codecogs.com/png.latex?\dpi{300}&space;\color{black}{\text{IPF/}}\color{red}{\text{IPV}}" alt="" /></td>
     <td><img src="https://latex.codecogs.com/png.latex?\dpi{300}&space;\color{black}{0.000/}\color{red}{1.000}" alt="" /></td>
     <td><img src="https://latex.codecogs.com/png.latex?\dpi{300}&space;\color{black}{0.000/}\color{red}{1.000}" alt="" /></td>
