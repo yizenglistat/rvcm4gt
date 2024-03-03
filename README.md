@@ -1,6 +1,6 @@
 ## RVCM4GT
 
-[![Downloads]([https://img.shields.io/github/v/release/yizenglistat/rvcm4gt](https://img.shields.io/github/v/release/:user/:repo
+[![Downloads]([https://img.shields.io/github/v/release/yizenglistat/rvcm4gt](https://img.shields.io/github/v/release/yizenglistat/rvcm4gt
 ))
 
 
