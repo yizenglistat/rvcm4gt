@@ -1,5 +1,5 @@
 ## RVCM4GT 
-[![package](https://img.shields.io/badge/build-pass-red)]()
+[![package](https://img.shields.io/badge/R-core-red)]()
 [![Releases](https://img.shields.io/github/v/release/yizenglistat/rvcm4gt)]()
 [![Downloads](https://img.shields.io/github/downloads/yizenglistat/rvcm4gt/total)]()
 
