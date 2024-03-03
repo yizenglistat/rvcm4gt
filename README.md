@@ -313,5 +313,5 @@ After collecting `.RData` files under `output/`, one should be able to reproduce
 ### Authors
 
 * [Yizeng Li](https://yizengli.com)
-* [Dewei Wang\*](https://sites.google.com/view/deweiwang)(the corresponding author)
+* [Dewei Wang\*](https://sites.google.com/view/deweiwang) - the corresponding author
 * [Joshua M. Tebbs](https://people.stat.sc.edu/tebbs/)
