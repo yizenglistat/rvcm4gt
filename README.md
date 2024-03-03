@@ -1,6 +1,6 @@
 ## RVCM4GT
 
-[![build](https://img.shields.io/badge/R-pass-green)]()
+[![build](https://img.shields.io/badge/R-passing-green)]()
 [![release](https://img.shields.io/github/v/release/yizenglistat/rvcm4gt)]()
 [![downloads](https://img.shields.io/github/downloads/yizenglistat/rvcm4gt/total.svg?kill_cache=1&color=red)]()
 
