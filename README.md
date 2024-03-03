@@ -319,27 +319,37 @@ After collecting `.RData` files under `output/`, one should be able to reproduce
 ### Authors
 
 <a href="https://github.com/yizenglistat">
-  <img src="https://github.com/yizenglistat.png?size=100" title="yizenglistat" alt="yizenglistat" width="50" height="50" style="border-radius: 100%;">
+  <svg width="50" height="50" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <defs>
+      <clipPath id="clip-circle">
+        <circle cx="25" cy="25" r="25"/>
+      </clipPath>
+    </defs>
+    <image href="https://github.com/yizenglistat.png?size=100" width="50" height="50" clip-path="url(#clip-circle)"/>
+  </svg>
 </a>
 <a href="https://github.com/Harrindy">
-  <img src="https://github.com/Harrindy.png?size=100" title="Harrindy" alt="Harrindy" width="50" height="50" style="border-radius: 100%;">
+  <svg width="50" height="50" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+  <defs>
+    <clipPath id="clip-circle">
+      <circle cx="25" cy="25" r="25"/>
+    </clipPath>
+  </defs>
+  <image href="https://github.com/Harrindy.png?size=100" width="50" height="50" clip-path="url(#clip-circle)"/>
+</svg>
 </a>
 <a href="https://scholar.google.com/citations?user=vSy9J1HEZlYC&hl=en">
-  <img src="https://scholar.googleusercontent.com/citations?view_op=medium_photo&user=vSy9J1HEZlYC&citpid=1" width="50" height="50" alt="Joshua M. Tebbs" style="border-radius: 100%;">
+    <svg width="50" height="50" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+  <defs>
+    <clipPath id="clip-circle">
+      <circle cx="25" cy="25" r="25"/>
+    </clipPath>
+  </defs>
+  <image href="https://scholar.googleusercontent.com/citations?view_op=medium_photo&user=vSy9J1HEZlYC&citpid=1?size=100" x="-9" y="-5" width="70" height="70" clip-path="url(#clip-circle)"/>
+</svg>
 </a>
 
 - [Dewei Wang](https://github.com/Harrindy) - *the corresponding author*
-
-
-
-
-
-<!-- 
-* [Yizeng Li](https://yizengli.com)
-* [Dewei Wang\*](https://sites.google.com/view/deweiwang) - the corresponding author
-* [Joshua M. Tebbs](https://people.stat.sc.edu/tebbs/)
-
- -->
 
 ### License
 This project is licensed under the MIT License - see the [License](LICENSE.txt) file for details.
