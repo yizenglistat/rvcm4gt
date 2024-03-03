@@ -1,6 +1,6 @@
 ## RVCM4GT
 
-![Downloads](https://img.shields.io/github/downloads/yizenglistat/rvcm4gt/total.svg)
+![Downloads](https://img.shields.io/github/v/downloads/yizenglistat/rvcm4gt/total.svg)
 ![Downloads](https://img.shields.io/github/v/release/yizenglistat/rvcm4gt)
 
 
