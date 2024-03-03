@@ -149,7 +149,7 @@ After collecting `.RData` files under `output/`, one should be able to reproduce
   </tr>
   
   <tr style="border-bottom: 1.5px solid black;">
-    <td align="left"><img src="https://latex.codecogs.com/png.latex?\dpi{300}&space;\color{red}{\delta_{14}=\delta_{24}=1}" alt="\color{red}{\delta_{14}=\delta_{24}=1}" /></td>
+    <td align="left"><img src="https://latex.codecogs.com/png.latex?\dpi{300}&space;\color{red}{\delta_{14}=\delta_{24}=1}" width="50" height="50"/></td>
    <td><img src="https://latex.codecogs.com/png.latex?\dpi{300}&space;\color{black}{\text{IPF/}}\color{red}{\text{IPV}}" alt="" /></td>
     <td><img src="https://latex.codecogs.com/png.latex?\dpi{300}&space;\color{black}{0.000/}\color{red}{1.000}" alt="" /></td>
     <td><img src="https://latex.codecogs.com/png.latex?\dpi{300}&space;\color{black}{0.000/}\color{red}{1.000}" alt="" /></td>
