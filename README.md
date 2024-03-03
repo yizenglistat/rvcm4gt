@@ -70,7 +70,7 @@ sigma <- 0.5
 After setting up the environment (`requirement.txt`) and arguments, one should be able to run the following code in `R` to reproduce simulation results in the paper.
 
 ```r
-source('main.r')
+> source('main.r')
 ```
 
 After collecting `.RData` files under `output/`, one should be able to reproduce the results subsequently. The following demo figure and demo table show that $\textcolor{red}{\textbf{red}}$ means the $\textcolor{red}{\textbf{age-varying effects}}$, $\textcolor{blue}{\textbf{blue}}$ means the significant but $\textcolor{blue}{\textbf{age-independent effects}}$ and $\textbf{black}$ means the $\textbf{insignificant effects}$ can be both correctly identified and estimated; see details in the paper.
@@ -315,3 +315,14 @@ After collecting `.RData` files under `output/`, one should be able to reproduce
 * [Yizeng Li](https://yizengli.com)
 * [Dewei Wang\*](https://sites.google.com/view/deweiwang) - the corresponding author
 * [Joshua M. Tebbs](https://people.stat.sc.edu/tebbs/)
+
+### License
+[MIT License](LICENSE.txt)
+
+
+
+
+
+
+
+
