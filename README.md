@@ -139,7 +139,7 @@ After collecting `.RData` files under `output/`, one should be able to reproduce
   </tr>
 
    <tr>
-    <td align="left"><img src="https://latex.codecogs.com/png.latex?\dpi{300}&space;\large{\color{red}{\delta_{12}=\delta_{22}=1}}?refresh=12345" alt="" /></td>
+    <td align="left"><img src="https://latex.codecogs.com/png.latex?\dpi{300}&space;\large{\color{red}{\delta_{12}=\delta_{22}=1}}&v=1" alt="" /></td>
     <td><img src="https://latex.codecogs.com/png.latex?\dpi{300}&space;\color{black}{\text{IPF/}}\color{red}{\text{IPV}}" alt="" /></td>
     <td><img src="https://latex.codecogs.com/png.latex?\dpi{300}&space;\color{black}{0.000/}\color{red}{1.000}" alt="" /></td>
     <td><img src="https://latex.codecogs.com/png.latex?\dpi{300}&space;\color{black}{0.000/}\color{red}{1.000}" alt="" /></td>
