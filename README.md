@@ -10,10 +10,10 @@ group testing data that can capture the age-varying impact on
 the Chlamydia risk with selection. To relate available information, we consider
 
 $$
-\text{logit}(\text{Pr}(\widetilde Y_i=1\mid \boldsymbol x_i, u_i))=\underbrace{\sum_{d=0}^p x_{id}\psi_d(u_i)}\_{\text{Age-varying Effects}} + \underbrace{\sum_{\ell=1}^L r_\ell(i)\gamma_\ell}\_{\text{Random Effect}} \quad\text{for }i=1,\ldots,N,
+\text{logit}(\text{Pr}(\widetilde Y_i=1\mid \boldsymbol x_i, u_i))=\underbrace{\psi_0(u_i)+\sum_{d=1}^p x_{id}\psi_d(u_i)}\_{\text{Age-varying Effects}} + \underbrace{\sum_{\ell=1}^L r_\ell(i)\gamma_\ell}\_{\text{Random Effect}} \quad\text{for }i=1,\ldots,N,
 $$
 
-where $\widetilde Y_i$ is the hidden Chlamydia status for $i^{th}$ patient, age $u_i$, $\boldsymbol x_i=(x_{i0},x_{i1},\ldots,x_{ip})^\top$ are covariates, and $\psi_d(u_i)=\delta_{1d}(\alpha_d+\delta_{2d}\beta_d(u_i))$ for binary indicators $\delta_{1d},\delta_{2d}$; see more details in the paper. In short, our stochastic search variable selection categorize each of covariates into three groups:
+where $\widetilde Y_i$ is the hidden chlamydia status for $i^{th}$ patient, age $u_i$, $\boldsymbol x_i=(x_{i1},\ldots,x_{ip})^\top$ are covariates, and $\psi_d(u_i)=\delta_{1d}(\alpha_d+\delta_{2d}\beta_d(u_i))$ for binary indicators $\delta_{1d},\delta_{2d}$; see more details in the paper. In short, our stochastic search variable selection categorize each of covariates into one of three groups:
 
 - $\delta_{1d}=0\longrightarrow$ insignificant effects.
 - $\delta_{1d}=1$
@@ -31,7 +31,7 @@ username@login001 ~$ cd rvcm4gt
 
 ```r
 # A demo example to run 500 repetitions in one machine.
-task_id <- 1 						
+task_id <- 1	
 nreps <- 500
 Ns <- c(3000, 5000)
 pool_sizes <- c(5, 10)
