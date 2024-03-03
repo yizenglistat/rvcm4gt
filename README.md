@@ -1,6 +1,8 @@
 ## RVCM4GT
 
 ![Downloads](https://img.shields.io/github/downloads/yizenglistat/rvcm4gt/total.svg)
+![Downloads](https://img.shields.io/github/v/release/yizenglistat/rvcm4gt)
+
 
 This repository contains R codes along with simulation results for "**Regularized Bayesian varying coefficient mixed models for group testing data**". Our model is try to estimate an individual-level regression model based on
 group testing data that can capture the age-varying impact on
