@@ -99,7 +99,7 @@ After collecting `.RData` files under `output/`, one should be able to reproduce
   </tr>
   
   <tr>
-    <td align="left"><img src="https://latex.codecogs.com/png.latex?\dpi{300}&space;\psi_5(u)=0" alt="\psi_5(u)=0\color{white}{aaaaaa}" /></td>
+    <td align="left"><img src="https://latex.codecogs.com/png.latex?\dpi{300}&space;\psi_5(u)=0" alt="\psi_5(u)=0\color{white}{-.1}" /></td>
     <td>IP</td>
     <td>0.007</td>
     <td>0.007</td>
@@ -109,7 +109,7 @@ After collecting `.RData` files under `output/`, one should be able to reproduce
   </tr>
   
   <tr>
-    <td align="left"><img src="https://latex.codecogs.com/png.latex?\dpi{300}&space;\psi_6(u)=0" alt="\psi_6(u)=0\color{white}{aaaaaa}" /></td>
+    <td align="left"><img src="https://latex.codecogs.com/png.latex?\dpi{300}&space;\psi_6(u)=0" alt="\psi_6(u)=0\color{white}{-.1}" /></td>
     <td style="border-bottom: 1.5px solid black;">IP</td>
     <td style="border-bottom: 1.5px solid black;">0.007</td>
     <td style="border-bottom: 1.5px solid black;">0.007</td>
