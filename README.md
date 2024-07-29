@@ -4,7 +4,6 @@
 [![release](https://img.shields.io/github/v/release/yizenglistat/rvcm4gt)]()
 [![downloads](https://img.shields.io/github/downloads/yizenglistat/rvcm4gt/total.svg?kill_cache=1&color=red)]()
 
-
 This repository contains R codes (for reproducibility) along with simulation results for "**Regularized Bayesian varying coefficient regression models for group testing data**". Our model is try to estimate an individual-level regression model based on
 group testing data that can capture the age-varying impact on
 the Chlamydia risk with selection. To relate available information, we consider
@@ -26,7 +25,9 @@ To reproduce the results in the paper, we provide implementation details as foll
 username@login001 ~$ git clone git@github.com:yizenglistat/rvcm4gt.git
 username@login001 ~$ cd rvcm4gt
 ```
-In addition, for the privacy of the Iowa SHL group testing data, we create a simulated fake Iowa group testing data (under `/data/simulated_fake_data.csv`) for illustration. 
+In addition, for the privacy of the Iowa SHL group testing data, we create a simulated fake Iowa group testing data (under `/data/simulated_fake_data.csv`) for illustration. As we will see the code running successfully below
+
+<img width="478" alt="image" src="https://github.com/user-attachments/assets/7fdcc3fc-3c3a-4dca-9e93-6c81b7e9a538">
 
 ### Arguments
 
