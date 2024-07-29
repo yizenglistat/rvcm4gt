@@ -25,7 +25,7 @@ To reproduce the results in the paper, we provide implementation details as foll
 username@login001 ~$ git clone git@github.com:yizenglistat/rvcm4gt.git
 username@login001 ~$ cd rvcm4gt
 ```
-In addition, for the privacy of the Iowa SHL group testing data, we create a simulated fake Iowa group testing data (under `/data/simulated_fake_data.csv`) for illustration. As we will see the code running successfully below
+In addition, for the privacy of the Iowa SHL group testing data, we create a simulated fake Iowa group testing data (under `/data/simulated_fake_data.csv`) for illustration. As we will see the code running on the fake data set successfully below
 
 <img width="478" alt="image" src="https://github.com/user-attachments/assets/7fdcc3fc-3c3a-4dca-9e93-6c81b7e9a538">
 
