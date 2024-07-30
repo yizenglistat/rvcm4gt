@@ -29,6 +29,11 @@ In addition, for the privacy of the Iowa SHL group testing data, we create a sim
 
 <img width="478" alt="image" src="https://github.com/user-attachments/assets/7fdcc3fc-3c3a-4dca-9e93-6c81b7e9a538">
 
+Simulated Iowa Chlamydia Data Estimation Results:
+
+<img width="1085" alt="image" src="https://github.com/user-attachments/assets/fa3cf74b-8858-45a6-beea-71adfd2c310b">
+
+
 ### Arguments
 
 ```r
