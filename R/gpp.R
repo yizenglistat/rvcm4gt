@@ -4,8 +4,8 @@ mcmc_options <- function(
 	nchain=1, nburn=500, nkeep=500, nmem=500, nthin=2, ndisp=100, nknots=100,
 	a_se=0.5, b_se=0.5, a_sp=0.5, b_sp=0.5,
 	a_sigma2=5, b_sigma2=50, known=FALSE, 
-	phi_sd=0.1, kappa=2, hpd95=FALSE, dirac=TRUE,
-	delete=TRUE, seed=FALSE)
+	phi_sd=0.1, kappa=2, hpd95=FALSE, dirac=TRUE, cdc=FALSE, 
+	delete=TRUE)
 {
 
 	if(nmem>nkeep|!(nkeep%%nmem)) nmem <- nkeep
@@ -13,8 +13,8 @@ mcmc_options <- function(
 	return(list(task_id=task_id, model_name=model_name, outdir=outdir, 
 		nchain=nchain, nburn=nburn, nkeep=nkeep, nmem=nmem, nthin=nthin, ndisp=ndisp, nknots=nknots, 
 		known=known, a_se=a_se, b_se=b_se, a_sp=a_sp, b_sp=b_sp, a_sigma2=a_sigma2, b_sigma2=b_sigma2,
-		phi_sd=phi_sd, kappa=kappa, hpd95=hpd95, dirac=dirac,
-		delete=delete, seed=seed))
+		phi_sd=phi_sd, kappa=kappa, hpd95=hpd95, dirac=dirac, cdc=cdc,
+		delete=delete))
 }
 
 gpp_mcmc <- function(chain_id=1, data, options=mcmc_options()){
@@ -26,6 +26,7 @@ gpp_mcmc <- function(chain_id=1, data, options=mcmc_options()){
 	X 		<- data$X
 	X_lin 	<- data$X
 	u_seq 	<- data$u_seq
+	race 	<- data$race
 	S 		<- data$S
 	Z 		<- data$Z
 	Y		<- data$Y
@@ -52,6 +53,8 @@ gpp_mcmc <- function(chain_id=1, data, options=mcmc_options()){
 	phi_sd 	<- options$phi_sd
 	kappa 	<- options$kappa
 	dirac 	<- options$dirac
+	cdc 	<- options$cdc
+
 	a_se 	<- options$a_se
 	b_se 	<- options$b_se
 	a_sp 	<- options$a_sp
@@ -210,34 +213,32 @@ gpp_mcmc <- function(chain_id=1, data, options=mcmc_options()){
 		space=H5S$new(dims=c(nkeep, nbeta), maxdims=c(nkeep, nbeta)),chunk_dims=c(nkeep,1))
 	delta2_store_tmp <- matrix(NA, nmem, nbeta)
 
-	# ----- summary statistics store required ------
+	# ----- summary statistics store required ------ 
 
 	# create prevalence store
 	prevalence_store <- chain$create_dataset(name="prevalence_store", dtype=h5types$H5T_NATIVE_FLOAT, 
 	space=H5S$new(dims=c(nkeep,1), maxdims=c(nkeep,1)),chunk_dims=c(nkeep,1))
-	prevalence_store_tmp <- matrix(NA, nmem, 1)
+	prevalence_store_tmp <- matrix(0, nmem, 1)
 
 	# create number of tests stores
 	ntests_store <- chain$create_dataset(name="ntests_store", dtype=h5types$H5T_NATIVE_FLOAT, 
 	space=H5S$new(dims=c(nkeep,1), maxdims=c(nkeep,1)),chunk_dims=c(nkeep,1))
-	ntests_store_tmp <- matrix(NA, nmem, 1)
+	ntests_store_tmp <- matrix(0, nmem, 1)
 	
 	# create posterior inclusion probability for varying effect
 	pip0_store <- chain$create_dataset(name="pip0_store", dtype=h5types$H5T_NATIVE_FLOAT, 
 	space=H5S$new(dims=c(nkeep,nbeta), maxdims=c(nkeep,nbeta)),chunk_dims=c(nkeep,1))
-	pip0_store_tmp <- matrix(NA, nmem, nbeta)
+	pip0_store_tmp <- matrix(0, nmem, nbeta)
 
 	# create posterior inclusion probability for fixed effect
 	pip1_store <- chain$create_dataset(name="pip1_store", dtype=h5types$H5T_NATIVE_FLOAT, 
 	space=H5S$new(dims=c(nkeep,nalpha), maxdims=c(nkeep,nalpha)),chunk_dims=c(nkeep,1))
-	pip1_store_tmp <- matrix(NA, nmem, nalpha)
+	pip1_store_tmp <- matrix(0, nmem, nalpha)
 
 	# create posterior inclusion probability for varying effect
 	pip2_store <- chain$create_dataset(name="pip2_store", dtype=h5types$H5T_NATIVE_FLOAT, 
 	space=H5S$new(dims=c(nkeep,nbeta), maxdims=c(nkeep,nbeta)),chunk_dims=c(nkeep,1))
-	pip2_store_tmp <- matrix(NA, nmem, nbeta)
-
-	
+	pip2_store_tmp <- matrix(0, nmem, nbeta)
 
 	niter 	<- nburn + nkeep * nthin
 
@@ -245,8 +246,7 @@ gpp_mcmc <- function(chain_id=1, data, options=mcmc_options()){
 	ikeep <- 0
 	slice_end <- 0
 	sample_state <- 'burn in'
-	
-
+		
 	do_loglikeli_d <- function(case, C_knots_d, C_knots_inv_d=NULL, GdP_d=NULL,omega=NULL, h_delta_d=NULL, large_var=50/4)
 	{
 
@@ -406,7 +406,22 @@ gpp_mcmc <- function(chain_id=1, data, options=mcmc_options()){
 				
 				draw <- rcat(1, c(p00, p10, p11), c(0,1,2))
 			}else{
-				draw <- 2
+				
+				if(cdc){
+					#"Intercept ", "Race ", "New Partner", "Multiple Partners", "Contact ", "Symptoms ", "Cervical Friability ", "Cervicitis ", "PID "
+					if(d==1) draw <- 2 # intercept
+					if(d==2) draw <- 2 # race
+					if(d==3) draw <- 1 # new
+					if(d==4) draw <- 1 # multiple
+					if(d==5) draw <- 1 # contact
+					if(d==6) draw <- 0 # symptom
+					if(d==7) draw <- 1 # cf
+					if(d==8) draw <- 0 # cerv
+					if(d==9) draw <- 0 # pid
+				}else{
+					draw <- 2
+				}
+
 			}
 		
 			if(draw==2){
@@ -436,7 +451,7 @@ gpp_mcmc <- function(chain_id=1, data, options=mcmc_options()){
 												R_cross_mat=R_cross_mat,
 												beta_d_config=beta_d_config)
 
-				beta[,d] 				<- beta_d_output$beta_d 								# update beta_d(t)
+				beta[,d] 				<- beta_d_output$beta_d									# update beta_d(t)
 				beta_unique[,d] 		<- beta_d_output$beta_d_unique							# update beta_d(t_unique)
 				beta_knots[,d] 			<- beta_d_output$beta_d_knots 							# update beta_d(t_knots)
 				beta_config[3,d] 		<- beta_d_output$tau 									# update tau in beta_config (d_th)
@@ -537,8 +552,7 @@ gpp_mcmc <- function(chain_id=1, data, options=mcmc_options()){
 				pip0_store_tmp[ikeep, ] 		<- 1.0*I(delta1==0&delta2==0)
 				pip1_store_tmp[ikeep, ] 		<- 1.0*I(delta1==1&delta2==0)
 				pip2_store_tmp[ikeep, ] 		<- 1.0*I(delta1==1&delta2==1)
-
-
+				
 			}
 			if(ikeep==nmem){
 				slice_start <- slice_end + 1
@@ -613,10 +627,6 @@ post_mean <- function(data_name=NULL, options=mcmc_options(), param_name, nparam
 
 gpp_estimate <- function(data, options=mcmc_options()){
 	
-	if(options$seed){
-		set.seed(options$seed)
-	}
-
 	tic <- proc.time()
 
 	# paralell computing

@@ -2,10 +2,10 @@ rm(list=ls(all=TRUE))
 graphics.off()
 
 # running locally which might be time-consuming to run reps=500
-setwd("set-working-directory") 
+
 task_id <- 1
 nreps <- 500
-knowns <- c(FALSE)
+knowns <- FALSE
 Ns <- c(5000)
 pool_sizes <- c(5, 10)
 model_names <- c("m1", "m2")
@@ -20,13 +20,12 @@ temp <- sapply(list.files("R", pattern="*.R$", full.names=TRUE, ignore.case=TRUE
 temp <- sapply(list.files("src", pattern="*.cpp$", full.names=TRUE, ignore.case=TRUE), function(x) sourceCpp(x))
 rm(temp)
 
+#set.seed(2222)
 for(rep in 1:nreps){
 	for(known in knowns){
 		for(N in Ns){
 			for(model_name in model_names){
 				for(pool_size in pool_sizes){
-
-					#set.seed(2222)
 
 					sim_options <- syn_options(
 						N=N, 
@@ -66,8 +65,7 @@ for(rep in 1:nreps){
 							known=known,
 							dirac=TRUE, 
 							phi_sd=0.1, kappa=2,
-							delete=TRUE, 
-							seed=FALSE
+							delete=TRUE
 						)
 
 						fit <- try(gpp_estimate(data, options), silent=TRUE)

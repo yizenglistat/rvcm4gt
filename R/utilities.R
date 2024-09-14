@@ -125,7 +125,7 @@ glue_tab_item <- function(x, y, digits=3)
 do_logit <- function(x) log(x/(1-x))
 do_logit_inv <- function(x) return(1/(1+exp(-x)))
 
-do_normalization <- function(x, log=FALSE)
+do_normalization <- function(x, a=5.629612, b=69.949588, log=FALSE)
 {
 	if(log){
 		out <- (log(x)-3)
@@ -444,7 +444,7 @@ do_AT<-function(Y_true, Se, Sp, cj){
 	return(list("Z"=Z, "Y"=Y))
 }
 
-do_stats <- function(est, std, true){
+do_stats <- function(est, lwr, upr, std, true){
 
 	est[is.na(est)] <- 0
 	std[is.na(std)] <- 0
@@ -455,9 +455,13 @@ do_stats <- function(est, std, true){
 	ssd <- apply(est, 1, sd)
 	ese <- apply(std, 1, mean)
 
-	med <- apply(est, 1, quantile, probs=c(0.5))
-	lower <- apply(est, 1, quantile, probs=c(0.025))
-	upper <- apply(est, 1, quantile, probs=c(1-0.025))
+	# med <- apply(est, 1, quantile, probs=c(0.5))
+	# lower <- apply(est, 1, quantile, probs=c(0.025))
+	# upper <- apply(est, 1, quantile, probs=c(1-0.025))
+
+	med <- apply(est, 1, mean)
+	lower <- apply(lwr, 1, mean)
+	upper <- apply(upr, 1, mean)
 
 	return(list(bias=bias, rmse=rmse, ese=ese, ssd=ssd, med=med, lower=lower, upper=upper))
 }
@@ -488,6 +492,10 @@ post_summary <- function(
 		# create store matrix
 		param_med <- param$create_dataset(name="param_med", dtype=h5types$H5T_NATIVE_FLOAT, 
 			space=H5S$new(dims=c(1, nreps), maxdims=c(Inf, nreps)),chunk_dims=c(1, nreps))
+		param_lwr <- param$create_dataset(name="param_lwr", dtype=h5types$H5T_NATIVE_FLOAT, 
+			space=H5S$new(dims=c(1, nreps), maxdims=c(Inf, nreps)),chunk_dims=c(1, nreps))
+		param_upr <- param$create_dataset(name="param_upr", dtype=h5types$H5T_NATIVE_FLOAT, 
+			space=H5S$new(dims=c(1, nreps), maxdims=c(Inf, nreps)),chunk_dims=c(1, nreps))
 		param_std <- param$create_dataset(name="param_std", dtype=h5types$H5T_NATIVE_FLOAT, 
 			space=H5S$new(dims=c(1, nreps), maxdims=c(Inf, nreps)),chunk_dims=c(1, nreps))
 		param_ext <- param$create_dataset(name="param_ext", dtype=h5types$H5T_NATIVE_FLOAT, 
@@ -515,42 +523,58 @@ post_summary <- function(
 			fitted <- readRDS(rdata_file)
 
 			# sigma
-			param_med[1,rep] <- fitted$sigma_hat_med
+			param_med[1,rep] <- fitted$sigma_hat
+			param_lwr[1,rep] <- fitted$sigma_hat_lower
+			param_upr[1,rep] <- fitted$sigma_hat_upper
 			param_std[1,rep] <- fitted$sigma_hat_std
 			param_eci[1,rep] <- 1.0*I(fitted$sigma_hat_lower<sigma && sigma<fitted$sigma_hat_upper)
 
 			# SE1
-			param_med[2,rep] <- fitted$se_hat_med[1]
+			param_med[2,rep] <- fitted$se_hat[1]
+			param_lwr[2,rep] <- fitted$se_hat_lower[1]
+			param_upr[2,rep] <- fitted$se_hat_upper[1]
 			param_std[2,rep] <- fitted$se_hat_std[1]	
 			param_eci[2,rep] <- 1.0*I(round(fitted$se_hat_lower[1],2)<=SE[1] && SE[1]<=round(fitted$se_hat_upper[1],2))
 
 			# SE2
-			param_med[3,rep] <- fitted$se_hat_med[2]
+			param_med[3,rep] <- fitted$se_hat[2]
+			param_lwr[3,rep] <- fitted$se_hat_lower[2]
+			param_upr[3,rep] <- fitted$se_hat_upper[2]
 			param_std[3,rep] <- fitted$se_hat_std[2]	
 			param_eci[3,rep] <- 1.0*I(fitted$se_hat_lower[2]<SE[2] && SE[2]<fitted$se_hat_upper[2])
 
 			# SP1
-			param_med[4,rep] <- fitted$sp_hat_med[1]
+			param_med[4,rep] <- fitted$sp_hat[1]
+			param_lwr[4,rep] <- fitted$sp_hat_lower[1]
+			param_upr[4,rep] <- fitted$sp_hat_upper[1]
 			param_std[4,rep] <- fitted$sp_hat_std[1]	
 			param_eci[4,rep] <- 1.0*I(fitted$sp_hat_lower[1]<SP[1] && SP[1]<fitted$sp_hat_upper[1])
 
 			# SP2
-			param_med[5,rep] <- fitted$sp_hat_med[2]
+			param_med[5,rep] <- fitted$sp_hat[2]
+			param_lwr[5,rep] <- fitted$sp_hat_lower[2]
+			param_upr[5,rep] <- fitted$sp_hat_upper[2]
 			param_std[5,rep] <- fitted$sp_hat_std[2]	
 			param_eci[5,rep] <- 1.0*I(fitted$sp_hat_lower[2]<SP[2] && SP[2]<fitted$sp_hat_upper[2])
 
 			# alpha
-			param_med[6:(5+nalpha),rep] <- fitted$alpha_hat_med
+			param_med[6:(5+nalpha),rep] <- fitted$alpha_hat
+			param_lwr[6:(5+nalpha),rep] <- fitted$alpha_hat_lower
+			param_upr[6:(5+nalpha),rep] <- fitted$alpha_hat_upper
 			param_std[6:(5+nalpha),rep] <- fitted$alpha_hat_std	
 			param_eci[6:(5+nalpha),rep] <- 1.0*I(fitted$alpha_hat_lower<=alpha & alpha<=fitted$alpha_hat_upper)
 
 			# pip1
 			param_med[(6+nalpha):(5+2*nalpha),rep] <- fitted$pip1_hat
+			param_lwr[(6+nalpha):(5+2*nalpha),rep] <- fitted$pip1_hat_lower
+			param_upr[(6+nalpha):(5+2*nalpha),rep] <- fitted$pip1_hat_upper
 			param_std[(6+nalpha):(5+2*nalpha),rep] <- fitted$pip1_hat_std	
 			param_eci[(6+nalpha):(5+2*nalpha),rep] <- 1.0*I(fitted$pip1_hat_lower<=pip1 & pip1<=fitted$pip1_hat_upper)
 
 			# pip2
 			param_med[(6+2*nalpha):(5+3*nalpha),rep] <- fitted$pip2_hat
+			param_lwr[(6+2*nalpha):(5+3*nalpha),rep] <- fitted$pip2_hat_lower
+			param_upr[(6+2*nalpha):(5+3*nalpha),rep] <- fitted$pip2_hat_upper
 			param_std[(6+2*nalpha):(5+3*nalpha),rep] <- fitted$pip2_hat_std	
 			param_eci[(6+2*nalpha):(5+3*nalpha),rep] <- 1.0*I(fitted$pip2_hat_lower<=pip2 & pip2<=fitted$pip2_hat_upper)
 
@@ -565,7 +589,7 @@ post_summary <- function(
 			N_test <- fitted$N_test
 			varying <- c(1,3,5)
 			nvarying <- 3
-			fitted$levs_test_hat_med <- rep(seq(-3,3,length.out=N_test), nalpha)
+			fitted$levs_test_hat <- rep(seq(-3,3,length.out=N_test), nalpha)
 
 			for(var_id in 1:nalpha){
 				
@@ -573,19 +597,21 @@ post_summary <- function(
 				slice_end <- N_test*var_id
 				slice <- slice_start:slice_end
 				if(var_id %in% varying){
-					true <- c(true, f_list[[glue("f{(var_id-1)/2}")]](fitted$levs_test_hat_med[slice]) + rep(alpha[var_id], N_test))
+					true <- c(true, f_list[[glue("f{(var_id-1)/2}")]](fitted$levs_test_hat[slice]) + rep(alpha[var_id], N_test))
 				}else{
 					true <- c(true, rep(0, N_test) + rep(alpha[var_id], N_test))
 				}
 				
-				param_med[slice+npts,rep] <- fitted$beta_test_hat_med[slice] + rep(fitted$alpha_hat_med[var_id], N_test)
+				param_med[slice+npts,rep] <- fitted$beta_test_hat[slice] + rep(fitted$alpha_hat[var_id], N_test)
+				param_lwr[slice+npts,rep] <- fitted$beta_test_hat_lower[slice] + rep(fitted$alpha_hat_lower[var_id], N_test)
+				param_upr[slice+npts,rep] <- fitted$beta_test_hat_upper[slice] + rep(fitted$alpha_hat_upper[var_id], N_test)
 				param_std[slice+npts,rep] <- fitted$beta_test_hat_std[slice] 
-				param_ext[var_id,rep] <- rmse(fitted$beta_test_hat_med[slice], true[slice])
+				param_ext[var_id,rep] <- rmse(fitted$beta_test_hat[slice], true[slice])
 
 			}
 
 			param_ext[nvarying+1,rep] <- fitted$time
-			param_ext[nvarying+2,rep] <- fitted$ntests_hat_med
+			param_ext[nvarying+2,rep] <- fitted$ntests_hat
 			# conditional pip(delta2 | delta1=1)
 			param_ext[(nvarying+3):(nvarying+2+nalpha),rep] <- safe_divide(fitted$delta2_hat, fitted$delta1_hat)
 			
@@ -593,12 +619,14 @@ post_summary <- function(
 
 		}
 
-		results <- do_stats(param_med[,], param_std[,], true)
+		results <- do_stats(param_med[,], param_lwr[,], param_upr[,], param_std[,], true)
 
-		results$levs <- c(rep(NA, npts), fitted$levs_test_hat_med)
+		results$levs <- c(rep(NA, npts), fitted$levs_test_hat)
 
 		results$true <- true
 		results$param_med <- param_med[,]
+		results$param_lwr <- param_lwr[,]
+		results$param_upr <- param_upr[,]
 		results$param_std <- param_std[,]
 		results$param_eci <- param_eci[,]
 		results$param_ext <- param_ext[,]

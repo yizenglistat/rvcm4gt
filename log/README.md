@@ -1,1 +1,0 @@
-This fold contains log files such as log.txt, err.txt from cluster. Igore if running locally. 
