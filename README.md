@@ -99,10 +99,13 @@ We include a simulated (fake) group testing data that closely emulate the struct
 > source('run_fake.r')
 ```
 
+### Significant and age-varying coefficients
 ![figure](output/fake/vcm_ssvs_varying_fake.png)
 
+### Significant but age-independent coefficients
 ![figure](output/fake/vcm_ssvs_fix_fake.png)
 
+### Insignificant coefficients
 ![figure](output/fake/vcm_ssvs_trivial_fake.png)
 
 ### Authors
