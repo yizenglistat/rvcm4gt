@@ -99,6 +99,12 @@ We include a simulated (fake) group testing data that closely emulate the struct
 > source('run_fake.r')
 ```
 
+![figure](output/simu/vcm_ssvs_varying_fake.pdf)
+
+![figure](output/simu/vcm_ssvs_fix_fake.pdf)
+
+![figure](output/simu/vcm_ssvs_trivial_fake.pdf)
+
 ### Authors
 
 <a href="https://github.com/yizenglistat">
