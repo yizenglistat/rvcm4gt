@@ -99,11 +99,11 @@ We include a simulated (fake) group testing data that closely emulate the struct
 > source('run_fake.r')
 ```
 
-![figure](output/simu/vcm_ssvs_varying_fake.png)
+![figure](output/fake/vcm_ssvs_varying_fake.png)
 
-![figure](output/simu/vcm_ssvs_fix_fake.png)
+![figure](output/fake/vcm_ssvs_fix_fake.png)
 
-![figure](output/simu/vcm_ssvs_trivial_fake.png)
+![figure](output/fake/vcm_ssvs_trivial_fake.png)
 
 ### Authors
 
