@@ -67,7 +67,7 @@ sigma <- 0.5
 - `sigma`
 > True random effect standard deviation
 
-### Reproduce
+### Simulation Reproduction
 
 After setting up the environment (`requirement.txt`) and arguments, one should be able to run the following code in `R` to reproduce simulation results in the paper.
 
@@ -89,6 +89,15 @@ After collecting `.RData` files under `output/`, one should be able to reproduce
 > IPF: the inclusion probability of the age-independent effect, i.e., $\alpha_d$ only.
 
 > IPV: the inclusion probability of the age-varying effect, i.e., $\beta_d(u)$ only.
+
+### Application Reproduction
+We include a simulated (fake) group testing data that closely emulate the structure of Iowa group testing data under the folder `data/fake/`. To reproduce the simulated data analysis results in the Supplementary Masterials, one can run the following script.
+
+```r
+# R version 4.4.0 or above
+
+> source('run_fake.r')
+```
 
 ### Authors
 
