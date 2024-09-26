@@ -356,7 +356,7 @@ gpp_mcmc <- function(chain_id=1, data, options=mcmc_options()){
 		# update theta1
 		theta1 <- rbeta(nalpha, delta1 + 1, 2 - delta1)
 		# update theta2
-		theta2 <- rbeta(nbeta, delta1*delta2 + 1, 1 + delta1*(1 - delta2))
+		theta2 <- rbeta(nbeta, delta2 + 1, 1 + delta1 - delta2)
 
 		# update delta1 and delta2
 		nmixed <- sample(1:nbeta,nbeta,replace=FALSE)
