@@ -5,7 +5,7 @@ gpp_config<-function(t, t_new, nknots=100, nbeta, phi_sd=0.1, kappa=2, step=0.01
 	t_lower 		<- min(t)							# lower bound of variable t
 	t_upper 		<- max(t)							# upper bound of variable t
 	
-	t_unique 		<- unique(sort(t))					# sorted extracted t_unique
+	t_unique 		<- sort(unique(t))					# sorted extracted t_unique
 	nunique 		<- length(t_unique)					# number of unique in t sequence 
 	
 	nnew 			<- length(t_new)					# number of unique for new t sequence
